@@ -1,0 +1,7 @@
+import statistics
+list1=[10,10,10,10,10,10]
+print(statistics.mean(list1))
+print(statistics.median(list1))
+print(statistics.median_high(list1))
+a=statistics.mean(list1)
+print(statistics.variance(list1,a))

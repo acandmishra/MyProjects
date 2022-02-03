@@ -1,0 +1,11 @@
+list=[1,2,2,2,3,4,5,6,7,8,9]
+print(len(list))
+print(list.index(7))
+list.append(10)
+print(50 in list)
+list.sort()
+print(list)
+list.reverse()
+print(list)
+print(list.count(2))
+print(list1:=list.copy())

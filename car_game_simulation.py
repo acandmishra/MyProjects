@@ -1,7 +1,7 @@
 print("car game simulation")
 a=""
-b=""
-c=""
+b=False
+c=False
 while True:
     a=input(">>>").upper()
     if a=="HELP":
