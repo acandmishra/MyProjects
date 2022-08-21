@@ -1,0 +1,208 @@
+#:kivy 2.0.0
+WidgetsExample:
+
+#:set s dp(200) # syntax to define variable and give it value
+
+<CanvasExample1>:
+    canvas:
+        Rectangle:
+            pos: self.center_x-(s/2),self.center_y-(s/2)
+            size: s,s
+        Ellipse:
+            pos:400,500
+            size: s,s/2
+        Line:
+            points: (0,0,self.width/4,100,self.width/2,0,self.width*3/4,100,self.width,0)
+            width:5
+        Line:
+            points: (0,100,self.width/4,200,self.width/2,100,self.width*3/4,200,self.width,100)
+            width:2.5
+
+<CanvasExample2>:
+    canvas:
+        Line:
+            points:(0,self.height/2,self.width,self.height/2)
+        Line:
+            points:(self.width/2,0,self.width/2,self.height)
+
+<CanvasExample3>:
+    canvas:
+        Color:      # Global instruction 
+            rgb:.8,.5,.6
+        Line:
+            circle:(self.width/2,self.height/2,self.height/4) # center_x , center_y , radius
+            width:2
+        Line:
+            ellipse:(0,0,200,400) # center_x , center_y , radius_x , radius_y
+            width:2
+        Line:
+            rectangle:((self.width/2)-50,(self.height/2)-75,100,150) # x,y,h,w
+            width:2      
+<CanvasExample4>:
+
+    canvas:
+        RoundedRectangle:
+            pos: self.center_x-(s/2) , self.center_y-(50)
+            size:s,100
+            
+
+
+<ImageExample@GridLayout>:
+    cols:3
+    
+    Image:
+        source:"D:\Computer Practice\Programming\Kivy\Lamborghini Sian.jpg"
+        # allow_stretch:True/False
+        # keep_ratio:by default true , can be changed to false also
+
+
+<WidgetsExample>:
+    cols:3
+    ToggleButton:
+        text:root.my_text2
+        on_state: root.On_Toggle_Button(self)  # self is used here to point to the ToggleButton 
+    
+    Button:
+        text:'Click Me'
+        on_press: root.On_Button_Press()
+        disabled:not root.status
+    Label:
+        text: root.my_text
+        font_name:"28_days_later/NewFont.ttf"
+        font_size: "100dp"
+        color: 0,1,0,1
+    Switch:
+        id: my_switch
+        on_active:root.On_Switch(self)
+    Slider:
+        id: my_slider
+        min:0
+        max:100
+        value:0
+        # on_value:root.On_Slider_Movement(self)
+        orientation:"vertical"
+        disabled: not my_switch.active
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:str(int(my_slider.value))
+            font_name:"28_days_later/NewFont.ttf"
+            font_size:"200dp"
+            color: 0.2 , 0 , 1 , 1
+        ProgressBar:
+            max:100
+            value:my_slider.value
+    TextInput:
+        id:my_text_input
+        size_hint:None,1
+        width:"100dp"
+        text: "Enter your name here:"
+        multiline: False
+        on_text_validate: root.on_text_validate(self) # works when enter key is pressed
+    Label:
+        text: "Your Name Is:" + root.string
+        
+<PageLayoutExample@PageLayout>:
+    GridLayoutExample:
+    AnchorLayoutExample:
+    BoxLayoutExample:
+    MainWidget:
+
+
+<StackLayoutExample@StackLayout>:
+    Button:
+        text:'@@'
+        size_hint: .2,.2
+    Button:
+        text:'A'
+        size_hint: .2,.2
+    Button:
+        text:'B'
+        size_hint: .2,.2
+    Button:
+        text:'C'
+        size_hint: .2,.2
+    Button:
+        text:'D'
+        size_hint: .2,.2
+    Button:
+        text:'E'
+        size_hint: .2,.2
+    Button:
+        text:'F'
+        size_hint: .2,.2
+    Button:
+        text:'G'
+        size_hint: .2,.2
+    Button:
+        text:'H'
+        size_hint: .2,.2
+    Button:
+        text:'I'
+        size_hint: .2,.2
+    Button:
+        text:'J'
+        size_hint: .2,.2
+
+<GridLayoutExample>: # <GridLayoutExample@GridLayout>: this declaration can also be used instead of declarion the same in python file
+    #rows:
+    #cols: ...... defining any one of these is compulsory 
+    cols:3
+    Button:
+        text:'A'
+    Button:
+        text:'B'
+    Button:
+        text:'C'
+    Button:
+        text:'D'
+    Button:
+        text:'E'
+    Button:
+        text:'F'
+    Button:
+        text:'G'
+        
+
+
+<AnchorLayoutExample>:
+    anchor_x:"center"   # Has left right and center locations
+    anchor_y:"top"    # Has top bottom and center locations
+    BoxLayout:
+        size_hint: .2,.2
+        orientation:'horizontal'
+        Button:
+            text:"A"
+        Button:
+            text:"B"
+            
+
+<BoxLayoutExample>:
+    orientation: "horizontal"
+    spacing:"20dp"
+    Button:
+        text:"A"
+        # size:"100dp","50dp"
+        size_hint: 1,1  # using none we can use manual mode with help of 'size' and for auto we can pass proportions
+        # we use x , center_x , right
+        # we use y , center_y , top
+        pos_hint:{"center_x":0.5}
+    Button:
+        text:"B"
+        size_hint: 1,1
+        # size_hint: None,None
+         
+    Button:
+        text:"C"
+        size_hint: 1,1
+
+<MainWidget>:
+    Button:
+        text:"hello" 
+        size: "40dp","40dp"
+        pos: "100dp","200dp"
+    Label:
+        text:"hello2" 
+        size: "40dp","40dp"
+        pos: "200dp","300dp"
+        color: 0.3,1,0.5,1   
