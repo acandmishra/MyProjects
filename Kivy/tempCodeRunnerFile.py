@@ -1,2 +1,0 @@
-class StackLayoutEample(StackLayout):
-#     pass

@@ -1,4 +1,0 @@
-dunder methods are the magic methods which are used to over ride the inbuilt functions and operators and to create constructor
-it helps to remap the inbuilt fuctions with the class it is defined
-examples are __init__ or __add__ or__truediv__ etc.
-refer python documentation on operator mapping
