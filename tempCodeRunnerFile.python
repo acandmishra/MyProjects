@@ -1,0 +1,3 @@
+l=[(1,"hello"),(2,"hiee"),(3,"byee")]
+d=dict(l)
+print(d)
