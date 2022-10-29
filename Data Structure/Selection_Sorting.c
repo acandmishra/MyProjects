@@ -13,7 +13,7 @@ void Selection(int arr[],int size){
         int min_index=i;
         printf("pass:%d\n",i+1);
         for(int j=i+1;j<size;j++){
-            printf("comparison:%d\n");
+            // printf("comparison:%d\n");
             if(arr[j]<arr[min_index]){
                 min_index = j;
             }

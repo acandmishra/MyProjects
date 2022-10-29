@@ -39,7 +39,6 @@ int main(){
     struct Node*second = (struct Node*)malloc(sizeof(struct Node));
     struct Node*third = (struct Node*)malloc(sizeof(struct Node));
     struct Node*fourth = (struct Node*)malloc(sizeof(struct Node));
-    struct Node*fifth = (struct Node*)malloc(sizeof(struct Node));
 
 
     head->data = 10;
@@ -52,13 +51,10 @@ int main(){
     third->next = fourth;
 
     fourth->data = 40;
-    fourth->next = fifth;
-
-    fifth->data = 50;
-    fifth->next = NULL;
+    fourth->next = NULL;
     
     Display(head);
-    Push(head,60);
+    Push(head,50);
     printf("\n");
     Display(head);
     head = Pop(head);

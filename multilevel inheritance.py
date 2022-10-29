@@ -14,5 +14,5 @@ class GrandSon(Son):
 
 Ram=Dad()
 shyam=Son()
-taam=GrandSon()
+tomy=GrandSon()
 print(Ram.score)

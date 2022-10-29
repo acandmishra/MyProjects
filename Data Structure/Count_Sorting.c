@@ -23,7 +23,7 @@ int Count(int arr[],int size){
     Aux1[j] = 0;
    }
    for(i=0;i<size;i++){
-    Aux1[arr[i]] = 1;
+    Aux1[arr[i]] += 1;
    }
    int Aux2[size];
    k=0;
@@ -39,7 +39,7 @@ int Count(int arr[],int size){
 }
 
 int main(){
-    int arr[]={72,48,12,61,84,36,9};
+    int arr[]={1,1,1,2,3,4,0};
     int size = 7;
     Display(arr,size);
     Count(arr,size);
