@@ -6,7 +6,7 @@ guess_limit=3
 while (guess_count<guess_limit):
     guess=int(input("YOUR GUESS:"))
     if(guess==target):
-        print("you won!")
+        print("you won!🥳🥳🥳🥳🥳")
         exit()
     guess_count += 1
 print("you lost!!🙃")

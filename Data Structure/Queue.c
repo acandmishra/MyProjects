@@ -43,10 +43,15 @@ int push(struct Queue*ptr){
     }
 }
 int pop(struct Queue*ptr){
+    if(Isempty(ptr)==1){
+        printf("Underqueued\n");
+    }
+    else{
     int a;
     a=ptr->arr[ptr->top];
     ptr->top--;
     printf("the popped element is %d\n",a);
+    }
 
 }
 void display(struct Queue *ptr){

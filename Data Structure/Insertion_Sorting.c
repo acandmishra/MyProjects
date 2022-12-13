@@ -28,6 +28,7 @@ int main(){
     int x = 6;
     Display(arr,x);
     Insertion(arr,x);
+    printf("\n");
     Display(arr,x);
 
 }

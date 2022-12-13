@@ -46,7 +46,42 @@ struct Node* InsertAtIndex(struct Node*head,int data,int index){
     ptr->data=data;
 
 }
-
+struct Node* DeleteAtEnd(struct Node*head){
+    struct Node*ptr = head;
+    while(ptr->next!=NULL){
+        ptr = ptr->next;
+    }
+    ptr->prev->next=NULL;
+    free(ptr);
+}
+struct Node*DeleteAtStart(struct Node*head){
+    struct Node*ptr = head;
+    head = head->next;
+    head->prev=NULL;
+    return head;
+}
+struct Node*DeleteNodeAtIndex(struct Node*head,int key){
+    struct Node*p=head;
+    struct Node*ptr=p->next;
+    int i=0;
+    while(i!=key-1){
+        p=p->next;
+        ptr=ptr->next;
+        i++;
+    }
+    p->next=ptr->next;
+    free(ptr);
+    p->next->prev=p;
+}
+struct Node*search(struct Node*head, int key){
+    struct Node*p =head;
+    int i=0;
+    while(p->data!=key){
+        p=p->next;
+        i++;
+    }
+    printf("\nelement found at index:%d",i);
+}
 int main(){
     struct Node* head;
     struct Node* second;
@@ -80,6 +115,17 @@ Display(head);
 printf("\n");
 InsertAtEnd(head,50);
 Display(head);
+printf("\n");
 InsertAtIndex(head,-100,3);
 Display(head);
+printf("\n");
+DeleteAtEnd(head);
+Display(head);
+printf("\n");
+head = DeleteAtStart(head);
+Display(head);
+printf("\n");
+DeleteNodeAtIndex(head,2);
+Display(head);
+search(head,30);
 }

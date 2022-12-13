@@ -14,7 +14,7 @@ void Display(struct Node*ptr){
 }
 struct Node* deletioninbetween(struct Node* head,int node){
     struct Node * ptr=head;
-    struct Node * pptr= ptr->next;
+    struct Node * pptr= head->next;
     int i=0;
     while(i!=(node-1)){
     ptr=ptr->next;
@@ -96,6 +96,6 @@ printf("hello hello hello 3\n");
 head=deletionatnode(head,second);
 Display(head);
 printf("hello hello hello 4\n");
-head=deletioninbetween(head,4);
+head=deletioninbetween(head,2);
 Display(head);
 }
