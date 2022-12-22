@@ -28,6 +28,7 @@ print(c.count("a"))
 print(c.count("a",3,9)) #takes three arg, 1.string to be counted, 2.strat index, 3.end index
 #by default above takes whole string 
 print(c.endswith("a")) #gives boolean
+# print(c.index("i"))
 # index works same as find except it gives error when not found whereas find returns -1
 x="set\n"
 print(a.isidentifier()) # it tellswhether the passed string can be used a variable name or not
@@ -51,11 +52,12 @@ print(w.lstrip("ab")) #this will remove all the continuous a and b until differe
 # strip will do the same from both the sides
 
 print(p.split()) # gives list with separate words
+# when nothing is passed in split then space is taken by default
 print(a:="123".split())
 # print(l.splitlines()) gives list with each lines as an element
 num="766606387"
-print(num.zfill(10)) # adds number to the front until length is 10
+print(num.zfill(10)) # adds number to the front until the length is 10
 part="Germany"
 print(part.partition("m")) # will do 3 partitions always and gives a tuple with passed substring as centre part
-#if substring is not passed then the wholw string is kept on first part and 2nd and 3rd are empty
+#if substring is not passed then the whole string is kept on first part and 2nd and 3rd are empty
 print(part.partition("w"))

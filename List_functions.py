@@ -17,7 +17,7 @@ print(L)
 print(L.count(7)) # counts the occurence of element passed
 L.clear() # clears all the elements in the list and upon printing gives --> []
 print(L)
-# del(L[2]) #deletes the list index passed
+# del(L[2]) # deletes the list index passed
 # print(L)
 # del(L) # deletes the complete list and printing list after this will give error
 # print(L)

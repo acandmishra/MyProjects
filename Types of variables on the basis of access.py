@@ -1,8 +1,6 @@
 # public
-# privated
+# private
 # protected
-from winreg import HKEY_LOCAL_MACHINE
-
 
 class Dad():
     score=100
@@ -23,6 +21,6 @@ class GrandSon(Son):
 Ram=Dad()
 shyam=Son()
 taam=GrandSon()
-print(shyam._protected)  #protected variables can't be used outside th3 python file in whoich they are defined , all the daughter classes within the same file can use it
-print(Ram._Dad__private)  #private variables can't be used by any class except the parent class and they also have different naming while accessing them
-
+print(shyam._protected) # protected variables can't be used outside the python file in which they are defined , all the daughter classes within the same file can use it
+print(Ram._Dad__private) # private variables can't be used by any class except the parent class and they also have different naming while accessing them
+# Object._ClassName__VariableName

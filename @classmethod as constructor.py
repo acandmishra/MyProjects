@@ -22,4 +22,3 @@ C = Student.struct("Raj-20-3rd")
 print(A.name)
 print(B.name)
 print(C.name)
-
