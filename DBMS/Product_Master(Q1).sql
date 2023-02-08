@@ -1,0 +1,13 @@
+-- use db;
+-- create table Product_Master
+-- (Product_no varchar(6),Description varchar(15),Profit_percentage decimal(4,2),Unit_measure varchar(10),Qty_on_hand decimal(8),
+-- Reorder_lvl decimal(8),Sell_price decimal(8,2),Cost_price decimal(8,2));
+-- insert into Product_Master values("P00001","1.44 Floppies",5,"Piece",100,20,525,500);
+-- insert into Product_Master values("P03453","Monitors",6,"Piece",10,3,12000,11280);
+-- insert into Product_Master values("P06734","Mouse",5,"Piece",20,5,1050,1000);
+-- insert into Product_Master values("P07865","1.22 Floppies",5,"Piece",100,20,525,500);
+-- insert into Product_Master values("P07866","Keyboard",2,"Piece",10,3,3150,3050);
+-- insert into Product_Master values("P07885","CD drive",2.5,"Piece",10,3,5250,5100);
+-- insert into Product_Master values("P07965","540 HDD",4,"Piece",10,3,84000,8000);
+-- insert into Product_Master values("P07975","1.44 Drive",5,"Piece",10,3,1050,1000);
+-- insert into Product_Master values("P08865","1.22 Drive",5,"Piece",2,3,1050,100);

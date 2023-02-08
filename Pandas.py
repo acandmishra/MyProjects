@@ -38,11 +38,10 @@ print(data.genre.value_counts().plot(kind="barh")) #same as above but gives hori
 print(data.genre.value_counts().plot(kind="pie")) #write only pie inside plot to get a pie chart
 print(data.describe()) # using describe() on csv gives followings
 # count,mean,std,min,25%,50%,75%,max
-print(data.groupby("genre").describe()) # it does the same thing as above but for each unique element fro the passed column
+print(data.groupby("genre").describe()) # it does the same thing as above but for each unique element for the passed column
 print(X:=data.groupby("genre").agg(["min","max","mean"])) # .agg is used to run multiple functions on data frame at same time
 # above will perform min,max,mean on all the columns that are integer type
 print(X:=data.groupby("genre").duration.agg(["min","max","mean"])) # this will perform the passed operatins only on duration column
 X.to_csv("PandasF2.csv")
 print(data.actors_list.str.contains("Khan")) # this will give boolean for each entry in actors_list
 print(data[data.actors_list.str.contains("Khan")]) # this will give all the entries in actors_list with khan in it
-

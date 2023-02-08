@@ -1,0 +1,10 @@
+-- use db;
+-- create table Salesman_Master
+-- (Salesman_no varchar(6), Salesman_Name varchar(20),
+-- Address1 varchar(30),Address2 varchar(30), City varchar(20),Pincode decimal(8),
+-- state varchar(20), Sal_amt decimal(8,2), Tgt_to_get decimal(6,2), ytd_sales decimal(6,2),
+-- Remarks varchar(60));
+-- insert into salesman_master values("S00001","Kiran","A/14","Worli","Bombay",400002,"Maharashtra",3000,100,50,"");
+-- insert into salesman_master values("S00002","Manish","65","Nariman","Bombay",400001,"Maharashtra",3000,200,100,"");
+-- insert into salesman_master values("S00003","Ravi","P-7","Bandra","Bombay",400032,"Maharashtra",3000,200,100,"");
+-- insert into salesman_master values("S00004","Ashish","A/5","Juhu","Bombay",400044,"Maharashtra",3500,150,150,"");

@@ -51,7 +51,7 @@ print("using ravel:")
 print(arr.ravel()) #used to convert any array into 1D
 print("using flatten")
 print(arr.flatten()) # used for the same purpose as ravel
-#using above wont change the actual array instead returns a new 1D array.
+# using above wont change the actual array instead returns a new 1D array.
 print("below is a 2D matrix")
 arr = np.array([[1,2,3],[4,5,6],[7,8,9]])
 print(arr)

@@ -1,10 +1,3 @@
-import pandas as pd
-A={
-    "name":["Acand","Ayod","Piggy","PooPoo"],
-    "class":["A","A","B","C"],
-    "marks":["95","97","88","78"]
-}
-D=pd.DataFrame(A)
-# D.to_csv("PandasF1.csv",index=False) # is used to create a csv file , index false is used to remove index
-A["class"][0]="Z"
-print(A)
+a=[3,5,6,7,32,43]
+for i in a:
+    print(bytes(i))
