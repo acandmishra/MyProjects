@@ -13,14 +13,21 @@ else:
     S2="X"
 A=set({})
 B=set({})
+def show(map):
+    print(map[0:3])
+    print(map[3:6])
+    print(map[6:9])
 def check(player,super):
     for i in super:
         if(i.issubset(player)):
             if(player==A):
+                show(map)
                 print("A is winner")
             else:
+                show(map)
                 print("B is winner")
             exit(0)
+
 
 Turn = 1
 i=0
@@ -34,7 +41,7 @@ while 0 in map:
         A.add(a)
         if i>=3:
             check(A,space)
-        print(map)
+        show(map)
         Turn=0
     else:
         j+=1
@@ -44,5 +51,5 @@ while 0 in map:
         B.add(b)
         if j>=3:
             check(B,space)
-        print(map)
+        show(map)
         Turn=1
